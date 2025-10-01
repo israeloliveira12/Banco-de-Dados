@@ -1,0 +1,71 @@
+1. Importância da modelagem conceitual
+
+A modelagem conceitual é essencial no desenvolvimento de sistemas de informação porque permite:
+
+Visualizar dados e processos de forma clara antes da implementação.
+
+Garantir independência de dados, separando o modelo conceitual da implementação física, facilitando alterações futuras no banco de dados sem impactar o sistema.
+
+Servir como ponte de comunicação entre desenvolvedores e usuários, possibilitando validar regras de negócio e requisitos do sistema de forma compreensível para ambos.
+
+
+*************
+
+
+2. Entidade forte vs entidade fraca
+
+Entidade forte: possui identidade própria e chave primária definida.
+Exemplo: Aluno em um sistema acadêmico, identificável pelo matricula.
+
+Entidade fraca: depende de uma entidade forte para existir, geralmente não possui chave primária própria.
+Exemplo: HistoricoAcademico vinculado a Aluno, identificado pelo par (matricula_aluno, codigo_disciplina).
+
+
+*************
+
+
+3. Chave primária, candidata e superchave
+
+Superchave: qualquer conjunto de atributos que identifica unicamente uma entidade.
+
+Chave candidata: superchave mínima, sem atributos redundantes.
+
+Chave primária: chave candidata escolhida para identificar a entidade no banco.
+
+Importância da escolha da chave primária:
+
+Garante integridade referencial e evita duplicidade de registros.
+
+Facilita consultas e índices eficientes.
+
+
+*************
+
+
+4. Relacionamentos ternários
+
+Um relacionamento ternário envolve três entidades simultaneamente.
+
+Exemplo: Em um sistema acadêmico, um relacionamento entre Professor, Disciplina e Turma pode indicar qual professor ministra qual disciplina em qual turma.
+
+É necessário quando não é possível decompor o relacionamento em pares binários sem perder informações.
+
+
+*************
+
+
+5. Atributos multivalorados e derivados
+
+Atributos multivalorados: podem ter mais de um valor para a mesma entidade.
+
+Exemplo: Telefone de um Aluno.
+
+Representação: em MER, desenhado com dupla elipse ou tabelas separadas no banco.
+
+Atributos derivados: calculados a partir de outros atributos.
+
+Exemplo: Idade derivada de DataNascimento.
+
+Representação: em MER, desenhado com linha tracejada.
+
+Normalização recomendada quando múltiplos valores causam redundância ou dificultam consultas eficientes.
